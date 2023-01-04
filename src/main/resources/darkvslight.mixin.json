@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "faz.darkvlight.com.darkvslight.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "PlayerMixin"
+  ],
+  "server": [
+    "ServerPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "darkvslight.nuxub-refmap.json"
+}

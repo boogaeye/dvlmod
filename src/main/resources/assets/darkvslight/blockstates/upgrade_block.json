@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkvslight:block/upgrade_block"
+    },
+    "facing=east": {
+      "model": "darkvslight:block/upgrade_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkvslight:block/upgrade_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkvslight:block/upgrade_block",
+      "y": 270
+    }
+  }
+}

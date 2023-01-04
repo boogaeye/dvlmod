@@ -1,0 +1,7 @@
+// 1.19.3	2023-01-01T12:51:27.5521407	Tags for minecraft:block mod id darkvslight
+92b6e4aa3772e478582b9dcadd70d89070f4f065 data/darkvslight/tags/blocks/base_stone_darkend.json
+a54d5ca7286df38327540f230048f69b1c8756d9 data/darkvslight/tags/blocks/darkend_carver_replaceables.json
+f92c41ce4c3dd51d875dafefe81e048bf6b8f9ed data/darkvslight/tags/blocks/dark_portal_frame_blocks.json
+2be36af33b2dcdfbc457f9b9b5bd5219e4a84f9d data/darkvslight/tags/blocks/needs_blind_tool.json
+3d42a201dba47824cbc92c2e849f952d65d5b700 data/minecraft/tags/blocks/mineable/hoe.json
+e74c1041ba9ddb456a62aa2ca845a8f68273f543 data/minecraft/tags/blocks/mineable/pickaxe.json
