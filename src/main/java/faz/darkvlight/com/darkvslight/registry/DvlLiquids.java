@@ -1,9 +1,7 @@
 package faz.darkvlight.com.darkvslight.registry;
 
 import faz.darkvlight.com.darkvslight.Darkvslight;
-import faz.darkvlight.com.darkvslight.block.DarkendLiquid;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.WaterFluid;

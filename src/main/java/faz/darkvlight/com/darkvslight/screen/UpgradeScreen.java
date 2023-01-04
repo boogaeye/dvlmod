@@ -65,7 +65,7 @@ public class UpgradeScreen extends AbstractContainerScreen<UpgradeMenu>
     {
         if (IsMouseAboveArea(pMouseX, pMouseY, x, y, 16, 16))
         {
-            renderTooltip(pPoseStack, fluidTankRenderer.getTooltip(menu.getFluidStack(), TooltipFlag.NORMAL), Optional.empty(), pMouseX - x, pMouseY - y);
+            renderTooltip(pPoseStack, fluidTankRenderer.getTooltip(menu.getFluidStack(), TooltipFlag.Default.NORMAL), Optional.empty(), pMouseX - x, pMouseY - y);
         }
     }
 

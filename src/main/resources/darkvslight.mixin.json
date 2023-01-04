@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "faz.darkvlight.com.darkvslight.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "client": [
     "PlayerMixin"
   ],

@@ -1,6 +1,6 @@
 package faz.darkvlight.com.darkvslight.registry;
 import faz.darkvlight.com.darkvslight.Darkvslight;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.Registry;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.*;
@@ -37,7 +37,7 @@ public class DvlTags {
 
         private static TagKey<Biome> tag(String name) {
 
-            return TagKey.create(Registries.BIOME, new ResourceLocation(Darkvslight.MODID, name));
+            return TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(Darkvslight.MODID, name));
         }
     }
 }

@@ -171,15 +171,15 @@ public class UpgradeBlockEntity extends BlockEntity implements MenuProvider
         {
             if (ticksRunning == 0)
             {
-                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradePrestart.get(), SoundSource.BLOCKS);
+                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradePrestart.get(), SoundSource.BLOCKS, 16, 16);
             }
             if (ticksRunning == 20)
             {
-                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeStart.get(), SoundSource.BLOCKS);
+                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeStart.get(), SoundSource.BLOCKS, 16, 16);
             }
             else if (ticksRunning % 38 == 0 && ticksRunning > 20)
             {
-                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeLoop.get(), SoundSource.BLOCKS);
+                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeLoop.get(), SoundSource.BLOCKS, 16, 16);
             }
             progress++;
             ticksRunning++;
@@ -194,7 +194,7 @@ public class UpgradeBlockEntity extends BlockEntity implements MenuProvider
         {
             if (ticksRunning != 0)
             {
-                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeEnd.get(), SoundSource.BLOCKS);
+                level.playSound(null, getBlockPos(), DvlSoundEvents.UpgradeEnd.get(), SoundSource.BLOCKS, 16, 16);
             }
             progress = 0;
             ticksRunning = 0;

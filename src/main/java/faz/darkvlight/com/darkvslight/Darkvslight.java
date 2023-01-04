@@ -35,8 +35,6 @@ import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
-//import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -71,7 +69,6 @@ public class Darkvslight {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::registerCreativeModeTab);
         modEventBus.addListener(this::entityAttribute);
         modEventBus.addListener(this::entityRenderers);
         modEventBus.addListener(this::registerLayerDef);
@@ -117,27 +114,6 @@ public class Darkvslight {
     public void entityAttribute(EntityAttributeCreationEvent ev)
     {
         ev.put(DvlEntities.DARKEND_BITER.get(), MeatballEntity.getMeatballAttributes().build());
-    }
-
-    public void registerCreativeModeTab(CreativeModeTabEvent.Register event) {
-
-        DvlItems.DarkendTab = event.registerCreativeModeTab(new ResourceLocation(Darkvslight.MODID, "main_tab"),
-                builder -> builder.icon(() -> DvlItems.DarkendStoneBlock.get().getDefaultInstance())
-                        .title(Component.translatable("itemGroup." + Darkvslight.MODID + ".main_tab"))
-                        .withLabelColor(0x664400)
-                        .displayItems((features, output, hasPermissions) ->
-                                output.acceptAll(Stream.of(
-                                                DvlItems.DarkendStoneBlock,
-                                                DvlItems.DarkCorrosionBlock,
-                                                DvlItems.StartileOreBlock,
-                                                DvlItems.StartileGem,
-                                                DvlItems.RawStartile
-
-                                        )
-                                        .map(item -> item.get().getDefaultInstance())
-                                        .toList())
-                        )
-        );
     }
 
     @SubscribeEvent
@@ -211,8 +187,8 @@ public class Darkvslight {
         {
             LOGGER.info("IM GATHERING THE FUCKING DATA WALTER");
             if (ev.includeServer()){
-                ev.getGenerator().addProvider(true, new DvlBiomeTags(ev.getGenerator().getPackOutput(), ev.getLookupProvider(), MODID, ev.getExistingFileHelper()));
-                ev.getGenerator().addProvider(true, new DvlBlockTags(ev.getGenerator().getPackOutput(), ev.getLookupProvider(), MODID, ev.getExistingFileHelper()));
+                ev.getGenerator().addProvider(true, new DvlBiomeTags(ev.getGenerator(), MODID, ev.getExistingFileHelper()));
+                ev.getGenerator().addProvider(true, new DvlBlockTags(ev.getGenerator(), MODID, ev.getExistingFileHelper()));
             }
         }
 

@@ -1,7 +1,6 @@
 package faz.darkvlight.com.darkvslight.registry;
 import faz.darkvlight.com.darkvslight.Darkvslight;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.biome.OverworldBiomes;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -21,6 +20,6 @@ public class DvlBiomes {
 
     private static ResourceKey<Biome> register(String name) {
         //BIOMES.register(name, OverworldBiomes::theVoid);
-        return ResourceKey.create(Registries.BIOME, name(name));
+        return ResourceKey.create(Registry.BIOME_REGISTRY, name(name));
     }
 }

@@ -26,10 +26,6 @@ public class DvlSoundEvents
     public static final RegistryObject<SoundEvent> UpgradeEnd = register("block.upgrade.end");
 
     private static RegistryObject<SoundEvent> register(String name) {
-        return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(Darkvslight.MODID, name)));
-    }
-
-    private static RegistryObject<SoundEvent> registerFixed(String name, float dist) {
-        return SOUNDS.register(name, () -> SoundEvent.createFixedRangeEvent(new ResourceLocation(Darkvslight.MODID, name), dist));
+        return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(Darkvslight.MODID, name)));
     }
 }
