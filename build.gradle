@@ -1,10 +1,13 @@
+
+
+
 plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
 group = 'faz.darkvlight.com'
-version = '1.0-1.19.3'
+version = '1.0-1.19.2'
 archivesBaseName = "darkvslight"
 
 java {
@@ -124,13 +127,19 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven { url = 'https://maven.minecraftforge.net' }
     maven {
         url "https://www.cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        url "https://repo.spongepowered.org/maven"
+    }
 }
+
+
 
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft' it is assumed
@@ -153,9 +162,10 @@ dependencies {
 
     // Visit https://www.curseforge.com/minecraft/mc-mods/jade/files/all
     // to get the latest version's jade_id
-    implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
-    implementation fg.deobf("curse.maven:cloth-config-348521:${cloth_id}")
-    implementation fg.deobf("curse.maven:betterf3-401648:${betterf3_id}")
+    //implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
+    //implementation fg.deobf("curse.maven:cloth-config-348521:${cloth_id}")
+    //implementation fg.deobf("curse.maven:betterf3-401648:${betterf3_id}")
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ServerPlayer.class)
 public class PlayerMixin {
 
-    @Inject(method = "tick", at = @At("HEAD"))
+    @Inject(method = "tick", at = @At(value = "HEAD"), remap = false)
     private void tick(CallbackInfo ci){
         if (!Minecraft.getInstance().isLocalServer()) return;
         LivingEntity ply = ((LivingEntity) (Object) this);

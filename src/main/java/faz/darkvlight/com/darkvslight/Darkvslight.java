@@ -8,8 +8,6 @@ import faz.darkvlight.com.darkvslight.client.models.MeatballModel;
 import faz.darkvlight.com.darkvslight.client.renderer.MeatballRenderer;
 import faz.darkvlight.com.darkvslight.entities.MeatballEntity;
 import faz.darkvlight.com.darkvslight.networking.ModMessages;
-import faz.darkvlight.com.darkvslight.plugins.betterf3.DarkVsLightModule;
-import faz.darkvlight.com.darkvslight.plugins.jade.DvlPlugin;
 import faz.darkvlight.com.darkvslight.registry.*;
 import faz.darkvlight.com.darkvslight.screen.UpgradeMenu;
 import faz.darkvlight.com.darkvslight.screen.UpgradeScreen;
@@ -83,7 +81,6 @@ public class Darkvslight {
         DvlRecipes.RECIPES.register(modEventBus);
         //DvlLiquids.FLUID.register(modEventBus);
         //DvlLiquids.FLUID_TYPES.register(modEventBus);
-        new DarkVsLightModule().init();
 
 
 

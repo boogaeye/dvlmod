@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ServerPlayer.class)
 public class ServerPlayerMixin {
 
-    @Inject(method = "tick", at = @At("HEAD"))
+    @Inject(method = "tick", at = @At("HEAD"), remap = false)
     private void tick(CallbackInfo ci){
         LivingEntity ply = ((LivingEntity) (Object) this);
         if (!(!ply.isSpectator() && !((ServerPlayer)ply).isCreative())) return;
